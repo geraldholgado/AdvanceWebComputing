@@ -8,9 +8,7 @@ $(document).ready(function(){
 			$(function(){
 			
 			
-			/*var movie = document.getElementById('movie');
-			var valmovie = movie.value;*/
-			
+
 			
 			$('#resultleft').html("");
 			$('#resultleft').append('<p class="text-info">Search Result for: ' +moviesearch+ '</p>');
@@ -19,13 +17,13 @@ $(document).ready(function(){
 				url: url,
 				data: {
 					q: moviesearch,
-					apiKey: 'hcrurhsttexasrgfm2y6yahm'
+					apiKey: 'd7ujzn7t8e75kf6nbmynvrbj'
 				},
 					dataType: 'jsonp',
 					success: showMovies
 			});
 			function showMovies(response){
-				//console.log(response);
+		
 				$('.movie_container').html("");
 				for(i=0;i<response.movies.length;i++){
 					var movie = response.movies[i];
@@ -40,9 +38,7 @@ $(document).ready(function(){
 					
 					$('.movie_container').append('<div class="movie_holder">'+'<div class="thumb">'+'<img src="' +movie.posters.thumbnail+'"/>'+'</div>'+'<div class="title">'+'<p class="movie_title">' +movie.title+ '</p>'+'<div class="synopsis">'+'<p>'+synop+'</p>'+'</div>'+'</div>'+'<div class="year">'+'<p>Year: ' +movie.year+ '</p>'+'</div>'+'</div>'+'<div class="clear">'+'</div>');
 				
-					/*$('.movie_container').append('<h3>' +movie.title+ '</h3>');
-					$('.movie_container').append('<img src="' +movie.posters.thumbnail+'"/>');
-					$('.movie_container').append('<h3>' +movie.year+ '</h3>');*/
+				
 					}
 				}
 					var lengthofmov = response.movies.length;
